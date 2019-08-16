@@ -1,0 +1,23 @@
+// mauricio vaca.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main ()
+{
+	float base;
+	float altura;
+	float area; 
+	cout<< "Ingresar la Base del Triangulo: "<<endl; 
+	cin>> base;
+	cout<< "Ingresar la Altura del triangulo: "<<endl;
+	cin>> altura;
+	area=(base*altura)/2;
+	cout<< "el area del Triangulo es: "<<area;
+	cin.ignore();
+	cin.get();
+	getch();
+}
+   
