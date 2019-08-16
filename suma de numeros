@@ -1,0 +1,20 @@
+// mauricio vaca.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main ()
+{
+	float suma,a,b;
+	cout<< "primer numero: "<<endl;
+	cin>>a;
+	cout<< "segundo numero: "<<endl;
+	cin>>b;
+	cout<< "suma total: "<<endl;
+	suma= a+b;
+	cout<< suma;
+	getch();
+}
+   
