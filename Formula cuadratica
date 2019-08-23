@@ -1,0 +1,37 @@
+// Ecuacion Cuadratica.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include "math.h"
+#include "conio.h"
+
+using namespace std;
+    void main ()
+	{
+
+     float a,b,c,x1,x2,x,D;
+        cout<< "ingrsar a:";
+		cin>>a;
+		cout<< "ingrsar b:";
+		cin>>b;
+		cout<< "ingrsar c:";
+		cin>>c;
+		if (a !=0)
+	{
+		D=b*b-4*4*a*c; // pow(b,2)-4*a*c solo math
+		if(D>0)
+    {
+	
+		x1=(-b+sqrt(D))/(2*a);
+		x2=(-b+sqrt(D))/(2*a);
+        cout<< "solucion reales x1: " <<x1<<"x2"<<x2;
+    }
+		else 
+			//ingresar por falso
+			if(D==0)
+				cout<< "solucion unica: "<<(-b)/(2*a);
+			else
+				cout<< "solucion imaginaria";
+		}
+		getch();
+}
