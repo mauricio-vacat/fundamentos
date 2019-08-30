@@ -1,0 +1,41 @@
+// fila-ejercicio 11.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main()
+{
+	float a,b,c,d,e,f,x,y;
+	cout<< "valores del sistema de ecuaciones: "<<"\n";
+	cout<<"ingrese A: ";
+	cin>>a;
+	cout<<"ingrese B: ";
+	cin>>b;
+	cout<<"ingrese C: ";
+	cin>>c;
+	cout<<"ingrese D: ";
+	cin>>d;
+	cout<<"ingrese E: ";
+	cin>>e;
+	cout<<"ingrese F: ";
+	cin>>f;
+	if ((a==d)&&(b==e))
+	{
+	cout<<"la funcion es singular";
+	}
+	else
+	{
+	x=((-b*f)+(c*e))/((-b*d)+(a*e));
+	y=((-c*d)+(f*a))/((-b*d)+(a*e));
+	cout<<"su valor de x es: ";
+	cout<<x;
+	cout<<"su valor de y es: ";
+	cout<<y;
+	}
+	getch();
+}
+
