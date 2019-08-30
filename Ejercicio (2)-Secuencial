@@ -1,0 +1,27 @@
+// Ejercicio (2) Esfera.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main()
+{
+	float d,c,a,v,pi,r;
+	cout<<"ingrese el diametro de la esfera: "<<"\n";
+	cin>>d;
+	pi=3.14159265;
+	r=d/2;
+	c=pi*d;
+	a=4*pi*r*r;
+	v=(4/3)*pi*r*r*r;
+	cout<<" la circunferencia de su esfera es: "<<"\n";
+	cout<<c<<"\n";
+	cout<<" el area de su esfera es: "<<"\n";
+	cout<<a<<"\n";
+	cout<<" el volumen de su esfera es: "<<"\n";
+	cout<<v;
+	getch();
+}
