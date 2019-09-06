@@ -1,0 +1,22 @@
+// Factorial-For.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main()
+{
+	int i, n, factorial;
+	cout<< "dame el valor de n: ";
+	cin>> n;
+	factorial=1;
+	i=1;
+	for (int i=1; i<n;i++)
+		factorial=factorial*i;
+	cout<< "factorial" <<factorial;
+	getch();
+}
+
