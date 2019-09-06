@@ -1,0 +1,28 @@
+// Suma de Serie N.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{
+	float n, suma, sumaA;
+	int i;
+	cout<< " ingrese la cantidad de numeros que quiere ingresar " << "\ n: ";
+	cin>> n;
+	i=1;
+	sumaA=0;
+	while (i<=n)
+	{
+		cout<< " ingrese su numero para sumar "<<"\n: ";
+		cin>> suma;
+		sumaA=sumaA+suma;
+		i=i+1;
+	}
+	cout<< "su suma total de sus numeros es "<<"\n: ";
+	cout<<sumaA;
+	getch();
+}
+ 
