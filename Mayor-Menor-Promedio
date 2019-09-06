@@ -1,0 +1,38 @@
+// Mayor-Menor-Promedio.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{ 
+	int mayor=0, menor=1000, numero, n;
+	cout<< " digite cantidad de numeros: ";
+	cin>> n;
+	float promedio=0, suma=0;
+	for (int i=1; i<=n; i++)
+	{ 
+		cout<< "ingrese un numero: ";
+		cin>> numero;
+		if (mayor<numero)
+		{
+			mayor=numero;
+		}
+		if (menor>numero)
+		{
+			menor=numero;
+		}
+		suma=suma + numero;
+	}
+	promedio=suma/n;
+	cout<< " el promedio es: "<< promedio << endl;
+	cout<< " la suma es: " << suma << endl;
+	cout<< " el mayor es: " << mayor << endl;
+	cout<< " el menor es: " << menor << endl;
+	 
+	getch();
+
+		
+}
