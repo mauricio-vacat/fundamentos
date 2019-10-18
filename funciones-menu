@@ -1,0 +1,68 @@
+// funciones.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+//prototipo
+float calculo_perimetro(float r);
+float calculo_area(float r);
+float calculo_volumen(float r);
+
+void main()
+{
+	float r, area;
+	int op;
+	do
+	{ 
+		cout<<"ingrese el radio: ";
+		cin>> r;
+		cout<<"1. calcular el perimetro "<<endl;
+		cout<<"2. calcular el area "<<endl;
+		cout<<"3. calcular el volumen "<<endl;
+		cout<<"4. salir "<<endl;
+		cout<<" ingresar opcion (1..4)"<<endl;
+		// seleccionar la opcion
+		cin>> op;
+		switch(op)
+		{
+		case 1: area=calculo_perimetro(r); 
+			cout<< area <<endl; //en la llamada no hay tipos
+			break;
+		case 2: area=calculo_area(r);
+			cout<< area <<endl; //en la llamada no hay tipos
+			break;
+		case 3: area=calculo_volumen(r);
+			cout<< area <<endl;  //en la llamada no hay tipos
+			break;
+		case 4: cout<< "salir"<<endl;
+			break;
+		case 5: cout<< "error"<<endl;
+		    break;
+		}
+
+	}
+	while(op!=4);
+	getch();
+}
+
+float calculo_perimetro(float r)
+{
+	return 2*3.141516*r; // calculo directo y retorna 
+}
+
+float calculo_area(float r)
+{
+	float aux;
+	aux=2*3.141516*r*r; //declaracion, calculo y retorna 
+	return aux;
+}
+
+float calculo_volumen(float r)
+{
+	float v=(4/3)*3.141516*r*r*r; // declara y retorna
+	return v;
+}
