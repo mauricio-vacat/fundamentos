@@ -1,0 +1,134 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+#define M 5
+#define C 5
+
+using namespace std;
+
+void comenzar();
+string mayuscula(string x);
+void numeros_aleatorios(int vec[]);
+
+
+void main()
+{
+	bool k=true;
+	int j,c=0;
+	int alazar[M],alazarposicion=0;
+	string respuestacorrecta,resp,jugar;
+	string mat[M][C]
+  {
+	  cout<<"caul es el oceano mas grande?";
+      cout<<"a)pacifico","b)atlantico","c)indico","a";
+	  cout<<"cual es el pais mas grande del mundo?";
+      cout<<"a)Estados unidos ","b)Rusia ","c)Canada ","b";
+	  cout<<"cual es el tercer planeta en el sistema solar?";
+      cout<<"a)Jupiter ","b)Marte ","c)La Tierra ","c";
+	  cout<<"cual es el pais mas poblado del mundo?";
+      cout<<"a)India","b)Rusia ","c)China ","c";
+	  cout<<"cual es la capital de Bolivia?";
+      cout<<"a)Santa Cruz ","b)Sucre ","c)La Paz ","b";
+	}
+
+	int comenzar;
+	int numeros_aleatorios(alazar);
+	do
+    {
+		if(alazarposicion>=F)
+    {
+		alazarposicion=0;
+		}
+
+	  j=alazar[alazarposicion];
+		respuestacorrecta=mat[j][4];
+        cout<<mat[j][0]<<endl;
+        cout<<mat[j][1]<<endl;
+        cout<<mat[j][2]<<endl;
+        cout<<mat[j][3]<<endl;
+		cout<<" Ingrese su respuesta: ";
+		cin>> resp;
+
+		if(resp==respuestacorrecta || resp==mayuscula(respuestacorrecta))
+    {
+			c++;
+			if(c>=5)
+      {
+				cout<<"Usted ha ganado"<<endl;
+				cout<<"Logro acumular"<< c <<" puntos...";
+				k=false;
+			}
+		}
+    else
+    {
+			cout<< "Respuesta Incorrecta" << endl;
+			cout<< "Desea jugar nuevamente?";
+      cin>> jugar;
+			
+        if(jugar=="s" || jugar=="S")
+        {
+				k=true;
+				return 0;
+			  }
+        else
+        {
+				cout<<"Obtuviste" " - "<<  c  << " - "  "puntos..."<<endl;
+				cout << "Gracias por participar";
+				k=false;
+			  }
+		}
+    
+		alazarposicion++;
+   }
+   while(k==true);
+	 getch();
+}
+
+
+
+void comenzar()
+{
+	cout<< endl << "Presione ENTER para continuar";
+	return 0;
+}
+
+string mayuscula(string x)
+{
+	if(x=="a")
+  {
+		return "A";
+	}
+   else
+    {
+		if(x=="b")
+     {
+			return "B";
+		 }
+     else
+      {
+			return "C";
+		  }
+	}
+}
+
+void numeros_aleatorios(int vec[])
+{
+	int rep;
+	for(int i=0;i<F;i++)
+  {
+	do
+    {
+		rep=0;
+		vec[i]=rand()%M;
+			for(int j=0;j<i;j++)
+      {
+			 if(vec[i]==vec[j])
+        {
+				rep++;
+				}
+			}
+	}
+   while(rep);
+}
+
